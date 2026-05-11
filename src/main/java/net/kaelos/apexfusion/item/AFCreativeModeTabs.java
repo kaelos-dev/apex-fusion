@@ -15,7 +15,7 @@ public class AFCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AF.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> MULTIBLOCK_COMPONENTS = TABS.register("multiblock_components", () -> 
-            CreativeModeTab.builder()
+        CreativeModeTab.builder()
             .title(Component.translatable("itemGroup." + AF.MOD_ID + ".multiblock_components"))
             .icon(() -> new ItemStack(AFBlocks.MULTI_CONSTRUCTIONS_BLOCKS.get(MultiblocksList.COKE_OVEN).get()))
             .displayItems((displayItems, output) -> {
@@ -23,6 +23,14 @@ public class AFCreativeModeTabs {
                     output.accept(AFBlocks.MULTI_CONSTRUCTIONS_BLOCKS.get(lists).get());
                     output.accept(AFBlocks.MULTI_CORE_BLOCKS.get(lists).get());
                 }
+            }).build());
+
+    public static final RegistryObject<CreativeModeTab> EQUIPMENTS = TABS.register("equipments", () -> 
+        CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup." + AF.MOD_ID + ".equipments"))
+            .icon(() -> new ItemStack(AFItems.INSTALLATION_WRENCH.get()))
+            .displayItems((displayItem, output) -> {
+                output.accept(AFItems.INSTALLATION_WRENCH.get());
             }).build());
 
     public static void register(IEventBus eventBus) {

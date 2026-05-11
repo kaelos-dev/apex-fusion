@@ -1,0 +1,24 @@
+{
+    "core_offset": [1, 1, 1],
+    "pattern": [
+        [
+            "BBB",
+            "BBB",
+            "BBB"
+        ],
+        [
+            "BBB",
+            "BCB",
+            "BBB"
+        ],
+        [
+            "BBB",
+            "BBB",
+            "BBB"
+        ]
+    ],
+    "dictionary": {
+        "B": "apexfusion:coke_oven_bricks",
+        "C": "apexfusion:coke_oven_core"
+    }
+}

@@ -5,7 +5,8 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 import net.kaelos.apexfusion.AF;
-import net.kaelos.apexfusion.block.multiblocks.ConstructionsBlock;
+import net.kaelos.apexfusion.block.custom.ProxyBlock;
+import net.kaelos.apexfusion.block.multiblocks.ConstructionBlock;
 import net.kaelos.apexfusion.block.multiblocks.CoreBlock;
 import net.kaelos.apexfusion.item.AFItems;
 import net.kaelos.apexfusion.util.lists.MultiblocksList;
@@ -25,10 +26,16 @@ public class AFBlocks {
 
     private static void createComponentsForMultiblocks() {
         for (MultiblocksList lists : MultiblocksList.values()) {
-            MULTI_CONSTRUCTIONS_BLOCKS.put(lists, registerBlock(lists.getName() + "_bricks", () -> new ConstructionsBlock()));
-            MULTI_CORE_BLOCKS.put(lists, registerBlock(lists.getName() + "_core", () -> new CoreBlock()));
+            MULTI_CONSTRUCTIONS_BLOCKS.put(lists, registerBlock(lists.getName() + "_bricks", () -> 
+                    new ConstructionBlock(lists.getSearchRadius())));
+            
+            MULTI_CORE_BLOCKS.put(lists, registerBlock(lists.getName() + "_core", () -> 
+                    new CoreBlock(lists)));
         }
     }
+
+    public static final RegistryObject<Block> PROXY = BLOCKS.register("proxy", () -> 
+            new ProxyBlock());
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> object = BLOCKS.register(name, block);

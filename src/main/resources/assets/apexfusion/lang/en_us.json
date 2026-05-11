@@ -1,5 +1,8 @@
 {
     "itemGroup.apexfusion.multiblock_components": "AF: Multiblock Components",
+    "itemGroup.apexfusion.equipments": "AF: Equipments",
+
+    "item.apexfusion.installation_wrench": "Installation Wrench",
 
     "block.apexfusion.coke_oven_bricks": "Coke Oven Bricks",
     "block.apexfusion.coke_oven_core": "Coke Oven Core"
