@@ -1,9 +1,17 @@
 {
     "itemGroup.apexfusion.multiblock_components": "AF: Multiblock Components",
     "itemGroup.apexfusion.equipments": "AF: Equipments",
+    "itemGroup.apexfusion.fluids": "AF: Fluids",
+    "itemGroup.apexfusion.parts_materials": "AF: Parts & Materials",
 
     "item.apexfusion.installation_wrench": "Installation Wrench",
+    
+    "item.apexfusion.coking_coal": "Coking Coal",
+    "item.apexfusion.creosote_bucket": "Creosote Bucket",
 
     "block.apexfusion.coke_oven_bricks": "Coke Oven Bricks",
-    "block.apexfusion.coke_oven_core": "Coke Oven Core"
+    "block.apexfusion.coke_oven_core": "Coke Oven Core",
+
+    "block.apexfusion.creosote_block": "Creosote",
+    "fluid_type.apexfusion.creosote_fluid": "Creosote"
 }
